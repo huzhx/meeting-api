@@ -10,10 +10,10 @@ import { MeetingTimeInterface } from './interfaces/meeting-time-interface';
 import { MeetingTime } from './value-objects/meeting-time';
 
 dotenv.config();
+const port = process.env.PORT;
 
 const app = express();
 app.use(express.json());
-const port = process.env.PORT;
 
 app.get('/', (req, res) => res.send('Express + Typescript'));
 
