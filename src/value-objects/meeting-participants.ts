@@ -1,6 +1,6 @@
 import { MeetingParticipantsInterface } from '../interfaces/meeting-participants-interface';
 
-export class meetingParticipants implements MeetingParticipantsInterface {
+export class MeetingParticipants implements MeetingParticipantsInterface {
   private _mentorId: string;
   private _menteeId: string;
 
@@ -10,7 +10,7 @@ export class meetingParticipants implements MeetingParticipantsInterface {
   }
 
   public static load({ menteeId, mentorId }: { menteeId: string; mentorId: string }): MeetingParticipantsInterface {
-    return new meetingParticipants(menteeId, mentorId);
+    return new MeetingParticipants(menteeId, mentorId);
   }
 
   get mentorId() {
